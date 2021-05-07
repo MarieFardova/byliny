@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bylinar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bylinar</h1>
+
+    <div class="kviz">
+      <p id="poradi">Otázka</p>
+
+      <h2 id="problem">Která bylina je na obrázku?</h2>
+
+      <div class="obsah">
+        <div class="foto">
+          <img id="obrazek" src="bylinar/obrazky/salvej.jpg" alt="šalvěj" />
+        </div>
+        <div id="moznosti">
+          <ul id="odpovedi">
+            <li data-odpoved="0">levandule</li>
+            <li data-odpoved="1">šalvěj</li>
+            <li data-odpoved="2">hluchavka</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="vysledek">
+      <h2>Tvoje hodnocení</h2>
+      <div id="hodnoceni"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
