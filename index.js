@@ -3,72 +3,63 @@ const otazky = [
     problem: 'Která bylina je na obrázku?',
     obrazek: 'salvej.jpg',
     odpovedi: ['Levandule', 'Šalvěj lékařská', 'Hluchavka'],
-    spravna: 2,
+    spravna: 1,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'bez.jpg',
     odpovedi: ['Bez černý', 'Ostružiník', 'Bolševník obecný'],
-    spravna: 1,
+    spravna: 0,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'bazalka.jpg',
     odpovedi: ['Levandule', 'Konopí', 'Bazalka pravá'],
-    spravna: 3,
+    spravna: 2,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'briza.jpg',
     odpovedi: ['Lípa', 'Olše', 'Bříza'],
-    spravna: 3,
+    spravna: 2,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'mata.jpg',
     odpovedi: ['Máta peprná', 'Šalvěj', 'Mateřídouška'],
-    spravna: 1,
+    spravna: 0,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'petrklic.jpg',
     odpovedi: ['Pryskyřník', 'Petrklíč', 'Kapustka'],
-    spravna: 2,
+    spravna: 1,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'jitrocel.jpg',
     odpovedi: ['Ambrozie peliňkolistá', 'Osladič obecný', 'Jitrocel větší'],
-    spravna: 3,
+    spravna: 2,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'hermanek.jpg',
     odpovedi: ['Heřmánek pravý', 'Vlčí bob', 'Janovec metlatý'],
-    spravna: 1,
+    spravna: 0,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'cesnek.jpg',
     odpovedi: ['Hluchavka pravá', 'Vavřín ušlechtilý', 'Česnek medvědí'],
-    spravna: 3,
+    spravna: 2,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'borovice.jpg',
     odpovedi: ['Jedle bělokorá', 'Borovice lesní', 'Smrk ztepilý'],
-    spravna: 2,
+    spravna: 1,
   },
 ];
-
-// // vybereme všechny elementy li pomocí querySelectorAll
-// let vybrano = document.querySelectorAll("#odpovedi li");
-// console.log(vybrano);
-
-// // každé položce nastavíme textContent Ahoj
-// vybrano.forEach((e) => (e.textContent = "Ahoj"));
-
-// vytvořit odkazy na HTML elementy
 
 let poradi = document.querySelector('#poradi');
 let problem = document.querySelector('#problem');
@@ -85,7 +76,7 @@ function zobrazOtazku(index) {
   problem.textContent = otazky[index].problem;
   obrazek.src = 'obrazky/' + otazky[index].obrazek;
 
-  // doplnime odpovedi do stranky
+  //odpovedi
   let obsahOdpovedi = '';
   for (i = 0; i < otazky[index].odpovedi.length; i++) {
     obsahOdpovedi += ` <li data-odpoved="${i}">${otazky[index].odpovedi[i]}</li>`;
@@ -111,16 +102,14 @@ function zobrazVyhodnoceni() {
   // skrýt otázky
   document.querySelector('.kviz').style.display = 'none';
 
-  // zobrazit stránku s vyhodnocením
+  //stránka s vyhodnocením
   document.querySelector('.vysledek').style.display = 'block';
 
-  // najdeme si div do ktereho budem vypisovat výsledky
   let hodnoceni = document.querySelector('#hodnoceni');
 
-  // načíst na jaké odpovědi jsem klikla
   console.log(mojeOdpovedi);
 
-  // vyhodnotit, jestli jsou odpovědi správné
+  // vyhodnotit
   let mojeBody = 0;
   for (i = 0; i < otazky.length; i++) {
     if (mojeOdpovedi[i] === otazky[i].odpovedi[otazky[i].spravna]) {
@@ -128,7 +117,6 @@ function zobrazVyhodnoceni() {
     }
   }
 
-  // vypsat otázky H3 a odpovědi P a jestli jsou správné
   let hodnoceniTemp = '';
   for (i = 0; i < otazky.length; i++) {
     hodnoceniTemp += `<h3>${i + 1}. ${otazky[i].problem}</h3>
@@ -143,7 +131,7 @@ function zobrazVyhodnoceni() {
   }
   hodnoceni.innerHTML += hodnoceniTemp;
 
-  // vypsat H2, kolik je správných + procentuální hodnocení
+  // správné + procentuální hodnocení
   hodnoceni.innerHTML += `<h2>Správně ${mojeBody} ze ${
     otazky.length
   } otázek. Úspěšnost ${Math.floor((mojeBody / otazky.length) * 100)}%.</h2>`;
