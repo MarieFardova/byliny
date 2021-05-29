@@ -41,7 +41,7 @@ h1 {
 .vysledek {
   margin: 30px auto;
   padding: 50px;
-  width: 800px;
+  width: 80%;
   min-height: 400px;
   background-color: white;
   color: black;
@@ -98,7 +98,7 @@ h1 {
   margin: 0 0 20px 0;
   padding: 10px 30px;
   background-color: var(--seda);
-  border-radius: 100px;
+  border-radius: 30px;
   transition: all 0.2s;
   transform: translateX(0);
 }
@@ -120,11 +120,8 @@ h1 {
   color: var(--cervena);
 }
 
-@media only screen and (max-width: 600px) {
-  .body {
-    width: 90%;
-    max-width: 100%;
-    margin: auto;
-    grid-column: span 1;
+@media (max-width: 700px) {
+  .obsah {
+    flex-direction: column;
   }
 }
