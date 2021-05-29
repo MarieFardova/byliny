@@ -27,13 +27,6 @@ body {
     var(--svetlazelena) 100%
   );
 }
-/*
-h1,
-h2,
-h3 {
-  font-family: 'Bangers', cursive;
-  font-weight: normal;
-}*/
 
 h1 {
   margin: 30px 0;
@@ -131,6 +124,6 @@ h1 {
   .body {
     max-width: 100%;
     margin: auto;
+    grid-column: span 1;
   }
 }
-/*grid-column: span 1;*/
