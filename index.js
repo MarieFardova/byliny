@@ -132,7 +132,7 @@ function zobrazVyhodnoceni() {
   hodnoceni.innerHTML += hodnoceniTemp;
 
   // správné + procentuální hodnocení
-  hodnoceni.innerHTML += `<h2>Správně ${mojeBody} ze ${
+  hodnoceni.innerHTML += `<h2>Správně ${mojeBody} z ${
     otazky.length
   } otázek. Úspěšnost ${Math.floor((mojeBody / otazky.length) * 100)}%.</h2>`;
 }
