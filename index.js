@@ -99,7 +99,6 @@ function klikNaOdpoved() {
 }
 
 function zobrazVyhodnoceni() {
-  // skrýt otázky
   document.querySelector('.kviz').style.display = 'none';
 
   //stránka s vyhodnocením
