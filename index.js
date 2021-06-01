@@ -1,4 +1,4 @@
-const otazky = [
+let otazky = [
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'salvej.jpg',
@@ -60,6 +60,15 @@ const otazky = [
     spravna: 1,
   },
 ];
+
+
+// nahodne zamichani otazek
+otazky.sort(() => Math.random() - 0.5);
+
+
+// zobraz jen prvnich nekolik otazek
+otazky = otazky.slice(0, 4);
+
 
 let poradi = document.querySelector('#poradi');
 let problem = document.querySelector('#problem');
