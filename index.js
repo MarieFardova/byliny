@@ -2,37 +2,37 @@ let otazky = [
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'salvej.jpg',
-    odpovedi: ['Levandule', 'Šalvěj lékařská', 'Hluchavka'],
+    odpovedi: ['Levandule lékařská', 'Šalvěj lékařská', 'Hluchavka skvrnitá'],
     spravna: 1,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'bez.jpg',
-    odpovedi: ['Bez černý', 'Ostružiník', 'Bolševník obecný'],
+    odpovedi: ['Bez černý', 'Ostružiník křovitý', 'Bolševník obecný'],
     spravna: 0,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'bazalka.jpg',
-    odpovedi: ['Levandule', 'Konopí', 'Bazalka pravá'],
+    odpovedi: ['Levandule lékařská', 'Konopí indické', 'Bazalka pravá'],
     spravna: 2,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'briza.jpg',
-    odpovedi: ['Lípa', 'Olše', 'Bříza'],
+    odpovedi: ['Lípa srdčitá', 'Olše lepkavá', 'Bříza bělokorá'],
     spravna: 2,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'mata.jpg',
-    odpovedi: ['Máta peprná', 'Šalvěj', 'Mateřídouška'],
+    odpovedi: ['Máta peprná', 'Šalvěj lékařská', 'Mateřídouška citronová'],
     spravna: 0,
   },
   {
     problem: 'Která bylina je na obrázku?',
     obrazek: 'petrklic.jpg',
-    odpovedi: ['Pryskyřník', 'Petrklíč', 'Kapustka'],
+    odpovedi: ['Pryskyřník prudký', 'Petrklíč jarní', 'Kapustka obecná'],
     spravna: 1,
   },
   {
@@ -59,16 +59,43 @@ let otazky = [
     odpovedi: ['Jedle bělokorá', 'Borovice lesní', 'Smrk ztepilý'],
     spravna: 1,
   },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'kostival.jpg',
+    odpovedi: ['Kostival lékařský', 'Kamejka lékařská', 'Otočník peruánský'],
+    spravna: 0,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'mesicek.jpg',
+    odpovedi: ['Lichořeřišnice větší', 'Měsíček lékařský', 'Lvoušek oranžový'],
+    spravna: 1,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'medunka.jpg',
+    odpovedi: ['Kopřiva dvoudommá', 'Máta pravá', 'Meduňka lékařská'],
+    spravna: 2,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'santa.jpg',
+    odpovedi: ['Šanta kočičí', 'Levandule pravá', 'Zběhovec planný'],
+    spravna: 0,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'brslicekozinoha.jpg',
+    odpovedi: ['Kerblík lesní', 'Bršlice kozí noha', 'Bolehlav plamatý'],
+    spravna: 1,
+  },
 ];
-
 
 // nahodne zamichani otazek
 otazky.sort(() => Math.random() - 0.5);
 
-
 // zobraz jen prvnich nekolik otazek
 otazky = otazky.slice(0, 4);
-
 
 let poradi = document.querySelector('#poradi');
 let problem = document.querySelector('#problem');
