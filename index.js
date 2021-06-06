@@ -119,7 +119,7 @@ let otazky = [
 otazky.sort(() => Math.random() - 0.5);
 
 // zobraz jen prvnich nekolik otazek
-otazky = otazky.slice(0, 4);
+otazky = otazky.slice(0, 5);
 
 let poradi = document.querySelector('#poradi');
 let problem = document.querySelector('#problem');
