@@ -89,6 +89,30 @@ let otazky = [
     odpovedi: ['Kerblík lesní', 'Bršlice kozí noha', 'Bolehlav plamatý'],
     spravna: 1,
   },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'kopriva.jpg',
+    odpovedi: ['Kopřiva dvoudomá', 'Máta planá', 'Konopí indické'],
+    spravna: 0,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'pampeliska.jpg',
+    odpovedi: ['Měsíček zahradní', 'Podběl lékařský', 'Pampeliška smetánka'],
+    spravna: 2,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'lipasrdcita.jpg',
+    odpovedi: ['Lípa srdčitá', 'Bříza bělokorá', 'Vrba jíva'],
+    spravna: 0,
+  },
+  {
+    problem: 'Která bylina je na obrázku?',
+    obrazek: 'pelynek.jpg',
+    odpovedi: ['Devětsil lékařský', 'Pelyněk pravý', 'Ambrozie peřenolistá'],
+    spravna: 1,
+  },
 ];
 
 // nahodne zamichani otazek
